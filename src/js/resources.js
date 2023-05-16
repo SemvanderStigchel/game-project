@@ -1,5 +1,5 @@
 import { ImageSource, Sound, Resource, Loader } from 'excalibur'
-import playerImage from '../images/Antwanrun.png'
+import playerImage from '../images/Antwanrunspritesheet.png'
 
 const Resources = {
     Antwan: new ImageSource(playerImage)
