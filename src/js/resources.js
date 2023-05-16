@@ -1,9 +1,9 @@
 import { ImageSource, Sound, Resource, Loader } from 'excalibur'
-import fishImage from '../images/fish.png'
+import playerImage from '../images/Antwanrun.png'
 
 const Resources = {
-    Fish: new ImageSource(fishImage)
+    Antwan: new ImageSource(playerImage)
 }
-const ResourceLoader = new Loader([Resources.Fish])
+const ResourceLoader = new Loader([Resources.Antwan]);
 
 export { Resources, ResourceLoader }
