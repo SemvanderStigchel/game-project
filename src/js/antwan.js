@@ -1,9 +1,12 @@
-import {Actor, Input, Vector, SpriteSheet, Random, Animation, range} from "excalibur";
+import {Actor, Input, Vector, SpriteSheet, Random, Animation, range, CollisionType} from "excalibur";
 import {Resources, ResourceLoader} from './resources.js';
+import {Floor} from "./floor.js";
 
 export class Antwan extends Actor {
+    grounded;
+
     constructor() {
-        super({width: Resources.Antwan.width, height: Resources.Antwan.height});
+        super({width: 170, height: Resources.Antwan.height});
         const runSheet = SpriteSheet.fromImageSource({
             image: Resources.Antwan,
             grid: {rows: 1, columns: 7, spriteWidth: 170, spriteHeight: 250},
@@ -13,22 +16,31 @@ export class Antwan extends Actor {
 
         this.graphics.add("run", run);
         this.graphics.use(run);
+        this.body.collisionType = CollisionType.Active;
+        this.body.useGravity = true;
     }
 
     onInitialize(_engine) {
         super.onInitialize(_engine);
-        this.pos = new Vector(200, 620);
+        this.pos = new Vector(200, 550);
+
+        this.on("collisionstart", (evt) => {
+            if(evt.other instanceof Floor) {
+                this.grounded = true;
+            }
+        })
     }
 
     _preupdate(engine, delta) {
         super._preupdate(engine, delta);
-        if (engine.input.keyboard.wasPressed(Input.Keys.Space)) {
+        if (engine.input.keyboard.wasPressed(Input.Keys.Space) && this.grounded) {
             this.jump();
         }
     }
 
     jump() {
-        this.vel = new Vector(0, -1000);
+        this.vel = new Vector(0, -2000);
+        this.grounded = false;
     }
 
 }
