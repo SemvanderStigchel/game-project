@@ -1,4 +1,4 @@
-import { ImageSource, Sound, Resource, Loader } from 'excalibur'
+import { ImageSource, Loader } from 'excalibur'
 import playerImage from '../images/Antwanrunspritesheet.png'
 import floorImage from '../images/Floorspritesheet.png'
 import backgroundImage from  '../images/Backgroundimage.png'
@@ -11,7 +11,7 @@ import kingImage from '../images/king.png'
 import pkImage from '../images/puntkomma.png'
 
 const Resources = {
-    Antwan: new ImageSource(playerImage),
+    Player: new ImageSource(playerImage),
     Floor: new ImageSource(floorImage),
     Background: new ImageSource(backgroundImage),
     Pawn: new ImageSource(pawnImage),
@@ -23,7 +23,7 @@ const Resources = {
     Pk: new ImageSource(pkImage)
 }
 const ResourceLoader = new Loader([
-    Resources.Antwan,
+    Resources.Player,
     Resources.Floor,
     Resources.Background,
     Resources.Pawn,

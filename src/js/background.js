@@ -3,7 +3,6 @@ import { Resources } from './resources.js'
 
 
 export class Background extends Actor {
-
     offset
 
     onInitialize(engine){

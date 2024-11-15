@@ -1,29 +1,18 @@
 import {
-    Actor,
-    Input,
-    Vector,
-    SpriteSheet,
-    Random,
-    Animation,
-    range,
-    CollisionType,
     Scene,
-    Label,
-    Font, FontUnit, Color
 } from "excalibur";
-import {Resources, ResourceLoader} from './resources.js';
 import {Background} from "./background.js";
 import {Floor} from "./floor.js";
-import {Antwan} from "./antwan.js";
-import {pkSpawner} from "./pkSpawner.js";
+import {Player} from "./Player.js";
+import {collectableSpawner} from "./CollectableSpawner.js";
 import {Obstacle} from "./obstacle.js";
 import {UI} from "./ui.js";
 
 export class Startgame extends Scene {
     ui;
-    antwan;
+    player;
     obstacle;
-    pk;
+    collectable;
     background;
     floor;
     score = 0;
@@ -36,8 +25,8 @@ export class Startgame extends Scene {
         this.floor = new Floor();
         this.add(this.floor);
 
-        this.pk = new pkSpawner();
-        this.add(this.pk);
+        this.collectable = new collectableSpawner();
+        this.add(this.collectable);
 
         this.obstacle = new Obstacle();
         this.add(this.obstacle);
@@ -47,8 +36,8 @@ export class Startgame extends Scene {
     }
 
     onActivate(_context) {
-        this.antwan = new Antwan();
-        this.add(this.antwan);
+        this.player = new Player();
+        this.add(this.player);
         this.obstacle.removeAllObstacles();
         this.score = 0;
 
@@ -61,7 +50,7 @@ export class Startgame extends Scene {
 
     _postupdate(engine, delta) {
         super._postupdate(engine, delta);
-        if (this.antwan.isKilled()) {
+        if (this.player.isKilled()) {
             engine.goToScene('gameover', {score: this.score});
         }
     }

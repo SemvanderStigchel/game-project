@@ -1,9 +1,8 @@
-import {Actor, Input, Vector, SpriteSheet, Random, Animation, range, CollisionType, Timer} from "excalibur";
-import {Resources, ResourceLoader} from './resources.js';
-import {Antwan} from "./antwan.js";
-import {UI} from "./ui.js";
+import {Actor, Vector, CollisionType} from "excalibur";
+import {Resources} from './resources.js';
+import {Player} from "./Player.js";
 
-export class Pk extends Actor {
+export class Collectable extends Actor {
     constructor() {
         super({width: Resources.Pk.width, height: Resources.Pk.height});
         this.graphics.use(Resources.Pk.toSprite());
@@ -14,11 +13,11 @@ export class Pk extends Actor {
 
     onInitialize(engine) {
         super.onInitialize(engine);
-        this.on("collisionstart", (event) => this.hitAntwan(event, engine));
+        this.on("collisionstart", (event) => this.hitPlayer(event));
     }
 
-    hitAntwan(event, engine) {
-        if(event.other instanceof Antwan) {
+    hitPlayer(event) {
+        if(event.other instanceof Player) {
             this.scene.addPoint();
             this.kill();
         }

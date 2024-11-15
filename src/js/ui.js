@@ -1,5 +1,4 @@
-import {Actor, Input, Vector, SpriteSheet, Random, Animation, range, CollisionType, ScreenElement, Label, Font, FontUnit, Color} from "excalibur";
-import {Resources, ResourceLoader} from './resources.js';
+import {Vector, ScreenElement, Label, Font, FontUnit, Color} from "excalibur";
 
 export class UI extends ScreenElement {
     scoreText
@@ -10,7 +9,7 @@ export class UI extends ScreenElement {
 
     onInitialize(engine) {
         this.scoreText = new Label({
-            text: `Puntkomma's gered: 0`,
+            text: `Inca goudstukken verzameld: 0`,
             font: new Font({
                 unit: FontUnit.Px,
                 family: 'Impact',
@@ -24,6 +23,6 @@ export class UI extends ScreenElement {
     }
 
     updateScore(score) {
-        this.scoreText.text = `Puntkomma's gered: ${score}`
+        this.scoreText.text = `Inca goudstukken verzameld: ${score}`
     }
 }

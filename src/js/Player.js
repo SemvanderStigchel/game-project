@@ -1,15 +1,14 @@
-import {Actor, Input, Vector, SpriteSheet, Random, Animation, range, CollisionType} from "excalibur";
-import {Resources, ResourceLoader} from './resources.js';
+import {Actor, Input, Vector, SpriteSheet, Animation, range, CollisionType} from "excalibur";
+import {Resources} from './resources.js';
 import {Floor} from "./floor.js";
-import {Obstacle} from "./obstacle.js";
 
-export class Antwan extends Actor {
+export class Player extends Actor {
     grounded;
 
     constructor() {
         super({width: 120, height: 250});
         const runSheet = SpriteSheet.fromImageSource({
-            image: Resources.Antwan,
+            image: Resources.Player,
             grid: {rows: 1, columns: 7, spriteWidth: 170, spriteHeight: 250},
         });
         console.log(runSheet.sprites);

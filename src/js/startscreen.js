@@ -1,17 +1,10 @@
 import {
-    Actor,
     Input,
     Vector,
-    SpriteSheet,
-    Random,
-    Animation,
-    range,
-    CollisionType,
     Scene,
     Label,
     Font, FontUnit, Color
 } from "excalibur";
-import {Resources, ResourceLoader} from './resources.js';
 import {Background} from "./background.js";
 import {Floor} from "./floor.js";
 
@@ -31,7 +24,7 @@ export class Startscreen extends Scene {
     onInitialize(engine) {
         super.onInitialize(engine);
         this.title = new Label({
-            text: 'Antwanrun',
+            text: 'Thijs op Reis!',
             font: new Font({
                 unit: FontUnit.Px,
                 family: 'Impact',
@@ -52,7 +45,7 @@ export class Startscreen extends Scene {
             }),
             pos: new Vector(400, 600)
         })
-        this.subtitle.actions.blink(500, 100, 1000);
+        this.subtitle.actions.blink(800, 100, 10000);
         this.add(this.subtitle);
     }
 

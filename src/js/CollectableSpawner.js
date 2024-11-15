@@ -1,8 +1,7 @@
-import {Actor, Input, Vector, SpriteSheet, Random, Animation, range, CollisionType, Timer} from "excalibur";
-import {Resources, ResourceLoader} from './resources.js';
-import {Pk} from "./pk.js";
+import {Actor, Random, Timer} from "excalibur";
+import {Collectable} from "./Collectable.js";
 
-export class pkSpawner extends Actor {
+export class collectableSpawner extends Actor {
     pk;
 
     constructor() {
@@ -23,7 +22,7 @@ export class pkSpawner extends Actor {
 
 
     spawn(engine) {
-        this.pk = new Pk();
+        this.pk = new Collectable();
         engine.currentScene.add(this.pk);
     }
 }
