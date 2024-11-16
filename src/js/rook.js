@@ -1,6 +1,5 @@
-import {Actor, Input, Vector, SpriteSheet, Random, Animation, range, CollisionType} from "excalibur";
-import {Resources, ResourceLoader} from './resources.js';
-import {Pawn} from "./pawn.js";
+import {Actor, Vector, CollisionType} from "excalibur";
+import {Resources} from './resources.js';
 
 export class Rook extends Actor {
     constructor() {

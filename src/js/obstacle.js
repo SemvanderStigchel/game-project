@@ -1,8 +1,6 @@
-import {Actor, Input, Vector, SpriteSheet, Random, Animation, range, CollisionType, Engine, Timer} from "excalibur";
-import {Resources, ResourceLoader} from './resources.js';
-import {Pawn} from "./pawn.js";
+import {Actor, Random, Timer} from "excalibur";
+import {Cactus} from "./Cactus.js";
 import {King} from "./king.js";
-import {Rook} from "./rook.js";
 import {Queen} from "./queen.js";
 import {Bishop} from "./bishop.js";
 import {Knight} from "./knight.js";
@@ -36,7 +34,7 @@ export class Obstacle extends Actor{
         if (this.randomNumber < 20) {
             this.obstacle = new Queen();
         } else if (this.randomNumber < 40) {
-            this.obstacle = new Rook();
+            this.obstacle = new Cactus();
         } else if (this.randomNumber < 60) {
             this.obstacle = new Bishop();
         } else if (this.randomNumber < 80) {
