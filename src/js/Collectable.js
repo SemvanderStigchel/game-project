@@ -6,7 +6,7 @@ export class Collectable extends Actor {
     constructor() {
         super({width: 100, height: 100});
         this.graphics.use(Resources.Collectable.toSprite());
-        this.pos = new Vector(2000, 495);
+        this.pos = new Vector(2000, 530);
         this.vel = new Vector(-1000,0);
         this.body.collisionType = CollisionType.Passive;
     }

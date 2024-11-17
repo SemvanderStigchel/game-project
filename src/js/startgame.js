@@ -38,9 +38,7 @@ export class Startgame extends Scene {
     onActivate(_context) {
         this.player = new Player();
         this.add(this.player);
-        this.obstacle.removeAllObstacles();
         this.score = 0;
-
     }
 
     addPoint() {

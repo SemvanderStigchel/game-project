@@ -11,8 +11,8 @@ export class Game extends Engine {
         this.start(ResourceLoader).then(() => this.startGame())
         Physics.useArcadePhysics();
         Physics.gravity = vec(0, 5000);
-        this.showDebug(true);
-        this.debug.transform.showAll = true;
+        // this.showDebug(true);
+        // this.debug.transform.showAll = true;
     }
 
     startGame() {

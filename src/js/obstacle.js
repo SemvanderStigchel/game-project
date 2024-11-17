@@ -2,8 +2,8 @@ import {Actor, Random, Timer} from "excalibur";
 import {Cactus} from "./Cactus.js";
 import {King} from "./king.js";
 import {Queen} from "./queen.js";
-import {Bishop} from "./bishop.js";
-import {Knight} from "./knight.js";
+import {Rock} from "./Rock.js";
+import {Bird} from "./Bird.js";
 
 export class Obstacle extends Actor{
     obstacle;
@@ -36,9 +36,9 @@ export class Obstacle extends Actor{
         } else if (this.randomNumber < 40) {
             this.obstacle = new Cactus();
         } else if (this.randomNumber < 60) {
-            this.obstacle = new Bishop();
+            this.obstacle = new Rock();
         } else if (this.randomNumber < 80) {
-            this.obstacle = new Knight();
+            this.obstacle = new Bird();
         } else if (this.randomNumber < 100) {
             this.obstacle = new King();
         }

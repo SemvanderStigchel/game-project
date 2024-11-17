@@ -11,7 +11,6 @@ export class Player extends Actor {
             image: Resources.Player,
             grid: {rows: 1, columns: 7, spriteWidth: 170, spriteHeight: 250},
         });
-        console.log(runSheet.sprites);
         const run = Animation.fromSpriteSheet(runSheet, range(0, 6), 80);
 
         this.graphics.add("run", run);
@@ -29,7 +28,6 @@ export class Player extends Actor {
                 this.grounded = true;
             }
         });
-
     }
 
     _preupdate(engine, delta) {

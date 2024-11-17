@@ -71,7 +71,7 @@ export class Gameover extends Scene {
         super._preupdate(engine, delta);
         if (engine.input.keyboard.wasPressed(Input.Keys.Enter)) {
             this.overallScore.kill();
-            engine.goToScene('startgame');
+            engine.goToScene('startscreen');
         }
     }
 }

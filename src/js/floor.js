@@ -3,11 +3,11 @@ import {Resources} from './resources.js';
 
 export class Floor extends Actor {
     constructor() {
-        super({width: 1535, height: 160});
+        super({width: 1535, height: 65});
 
          const floorSheet = SpriteSheet.fromImageSource({
-             image: Resources.Floor,
-             grid: {rows: 9, columns: 1, spriteWidth: 1530, spriteHeight:160},
+             image: Resources.JungleFloor,
+             grid: {rows: 13, columns: 1, spriteWidth: 1640, spriteHeight:65},
          });
         const floor = Animation.fromSpriteSheet(floorSheet, range(0, 12), 80);
 
@@ -18,6 +18,6 @@ export class Floor extends Actor {
 
     onInitialize(_engine) {
         super.onInitialize(_engine);
-        this.pos = new Vector(765, 705);
+        this.pos = new Vector(765, 720);
     }
 }
