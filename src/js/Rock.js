@@ -1,5 +1,5 @@
 import {Actor, Vector, CollisionType, RotationType} from "excalibur";
-import {Resources} from './resources.js';
+import {Resources} from './Resources.js';
 
 export class Rock extends Actor {
     constructor() {

@@ -1,5 +1,5 @@
 import { Actor, Vector, GraphicsGroup } from 'excalibur'
-import { Resources } from './resources.js'
+import { Resources } from './Resources.js'
 
 
 export class Background extends Actor {

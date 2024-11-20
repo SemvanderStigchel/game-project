@@ -1,5 +1,5 @@
 import {Actor, Vector, SpriteSheet, Animation, range, CollisionType} from "excalibur";
-import {Resources} from './resources.js';
+import {Resources} from './Resources.js';
 
 export class Floor extends Actor {
     constructor() {

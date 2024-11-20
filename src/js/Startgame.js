@@ -1,12 +1,12 @@
 import {
     Scene,
 } from "excalibur";
-import {Background} from "./background.js";
-import {Floor} from "./floor.js";
+import {Background} from "./Background.js";
+import {Floor} from "./Floor.js";
 import {Player} from "./Player.js";
 import {collectableSpawner} from "./CollectableSpawner.js";
-import {Obstacle} from "./obstacle.js";
-import {UI} from "./ui.js";
+import {Obstacle} from "./Obstacle.js";
+import {Ui} from "./Ui.js";
 
 export class Startgame extends Scene {
     ui;
@@ -31,7 +31,7 @@ export class Startgame extends Scene {
         this.obstacle = new Obstacle();
         this.add(this.obstacle);
 
-        this.ui = new UI();
+        this.ui = new Ui();
         this.add(this.ui);
     }
 

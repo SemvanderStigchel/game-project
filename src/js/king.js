@@ -1,5 +1,5 @@
 import {Actor, Vector, CollisionType} from "excalibur";
-import {Resources} from './resources.js';
+import {Resources} from './Resources.js';
 
 export class King extends Actor {
     constructor() {

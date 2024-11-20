@@ -1,6 +1,6 @@
 import {Vector, ScreenElement, Label, Font, FontUnit, Color} from "excalibur";
 
-export class UI extends ScreenElement {
+export class Ui extends ScreenElement {
     scoreText
 
     constructor() {

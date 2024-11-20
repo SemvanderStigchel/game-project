@@ -1,6 +1,6 @@
 import {Actor, Input, Vector, SpriteSheet, Animation, range, CollisionType} from "excalibur";
-import {Resources} from './resources.js';
-import {Floor} from "./floor.js";
+import {Resources} from './Resources.js';
+import {Floor} from "./Floor.js";
 
 export class Player extends Actor {
     grounded;

@@ -1,9 +1,9 @@
 import '../css/style.css';
 import {Engine, Physics, vec} from "excalibur";
-import {ResourceLoader} from './resources.js';
-import {Startgame} from "./startgame.js";
-import {Startscreen} from "./startscreen.js";
-import {Gameover} from "./gameover.js";
+import {ResourceLoader} from './Resources.js';
+import {Startgame} from "./Startgame.js";
+import {Startscreen} from "./Startscreen.js";
+import {Gameover} from "./Gameover.js";
 
 export class Game extends Engine {
     constructor() {

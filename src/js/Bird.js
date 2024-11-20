@@ -1,5 +1,5 @@
 import {Actor, Vector, CollisionType, SpriteSheet, Animation, range} from "excalibur";
-import {Resources} from './resources.js';
+import {Resources} from './Resources.js';
 
 export class Bird extends Actor {
     constructor() {
@@ -13,7 +13,7 @@ export class Bird extends Actor {
         this.graphics.add("fly", fly);
         this.graphics.use(fly);
         this.pos = new Vector(2000, 500);
-        this.vel = new Vector(-1100,0);
+        this.vel = new Vector(-1300,0);
         this.body.collisionType = CollisionType.Fixed;
         if (this.pos.x < 0) {
             this.kill();
