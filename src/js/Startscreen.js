@@ -11,6 +11,7 @@ import {Floor} from "./Floor.js";
 export class Startscreen extends Scene {
     title;
     subtitle;
+    instruction;
 
     constructor() {
         super();
@@ -35,13 +36,25 @@ export class Startscreen extends Scene {
         })
         this.add(this.title);
 
+        this.instruction = new Label({
+            text: 'Spatie = springen',
+            font: new Font({
+                unit: FontUnit.Px,
+                family: 'Impact',
+                size: 28,
+                color: Color.Black,
+            }),
+            pos: new Vector(400, 350)
+        })
+        this.add(this.instruction);
+
         this.subtitle = new Label({
             text: 'Druk op enter om te starten!',
             font: new Font({
                 unit: FontUnit.Px,
                 family: 'Impact',
                 size: 28,
-                color: Color.Black,
+                color: Color.White,
             }),
             pos: new Vector(400, 600)
         })
